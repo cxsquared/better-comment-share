@@ -1096,15 +1096,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_utils_PostControls__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_utils_PostControls__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/Button */ "flarum/components/Button");
 /* harmony import */ var flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_Button__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js");
-/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(clipboard__WEBPACK_IMPORTED_MODULE_5__);
-
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  new clipboard__WEBPACK_IMPORTED_MODULE_5___default.a('#comment-share');
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_utils_PostControls__WEBPACK_IMPORTED_MODULE_2___default.a, 'userControls', function (items, post) {
     var permalink = window.location.origin + flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.route.post(post);
     items.add('share', m(flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1128,11 +1124,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/app */ "flarum/app");
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _addShareControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addShareControl */ "./src/forum/addShareControl.js");
+/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! clipboard */ "./node_modules/clipboard/dist/clipboard.js");
+/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(clipboard__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _addShareControl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addShareControl */ "./src/forum/addShareControl.js");
 
 
+
+var clipboard = new clipboard__WEBPACK_IMPORTED_MODULE_1___default.a('#comment-share');
 flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('cxsquared/better-comment-share', function () {
-  Object(_addShareControl__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_addShareControl__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 
 /***/ }),
