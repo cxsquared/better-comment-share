@@ -2,8 +2,8 @@ import app from 'flarum/app';
 import Modal from 'flarum/components/Modal';
 
 export default class SharePostModal extends Modal {
-    oninit(vnode) {
-        super.oninit(vnode);
+    oninit() {
+        super.oninit();
         setTimeout(() => $(this).parent().find('.PostMeta-permalink').select());
     }
 
@@ -16,7 +16,7 @@ export default class SharePostModal extends Modal {
     }
 
     content() {
-        const post = this.attrs.post;
+        const post = this.props.post;
         const permalink = window.location.origin + app.route.post(post);
         const touch = 'ontouchstart' in document.documentElement;
 
