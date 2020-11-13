@@ -12,7 +12,7 @@ export default class SharePostModal extends Modal {
     }
 
     title() {
-        return "Share";
+        return "Share this post";
     }
 
     content() {
@@ -22,6 +22,7 @@ export default class SharePostModal extends Modal {
 
         return (
             <div className="Modal-body">
+                <h3>Link to post</h3>
                 {touch ? ( <a className="Button PostMeta-permalink" href={permalink}>
                     {permalink}
                     </a>
