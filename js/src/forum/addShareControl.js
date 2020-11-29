@@ -7,7 +7,7 @@ import SharePostModal from './components/SharePostModal';
 export default function() {
     extend(PostControls, 'userControls', function(items, post) {
         items.add('share',
-            <Button icon="fas fa-share" onclick={() => app.modal.show(new SharePostModal({post}))}>Share</Button>,
+            <Button icon="fas fa-share" onclick={() => app.modal.show(SharePostModal, {post})}>Share</Button>,
             5
         );
     });
